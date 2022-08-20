@@ -1,5 +1,5 @@
 /* Global Variables */
-const key = '&appid=38244a8238de06ab7b24935093c321c8';
+const key = '&appid=38244a8238de06ab7b24935093c321c8&units=metric';
 const url = 'http://localhost:3000/';
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -65,7 +65,7 @@ async function UpdateUI(){
             data=> {
                 name.innerHTML = `City Name: ${data.name}`;
                 date.innerHTML = `Date is: ${d}`;
-                temp.innerHTML = `Temp is: ${(data.main.temp-273.15).toFixed(2)} C`;
+                temp.innerHTML = `Temp is: ${(data.main.temp)} C`;
                 content.innerHTML = `My feeling is: ${feel.value}`;                
             }
         ).catch(error=> console.log("error 4"));
